@@ -19,6 +19,7 @@ app = Flask(__name__)
 app.config["MONGO_URI"] = "mongodb://localhost:27017/myDatabase"
 
 
+mongo = PyMongo(app)
 client = MongoClient()
 db = client.ACSHub
 articles = db.articles
@@ -48,6 +49,7 @@ def playlists_new():
 @app.route('/articles', methods=['POST'])
 def playlists_submit():
     article = {
+        'title': request.form.get('author'),
         'author': request.form.get('author'),
         'body': request.form.get('description'),
     }
