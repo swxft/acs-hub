@@ -7,6 +7,10 @@
 ---
 - [x]  Wireframes
 - [x]  ERD (≥ 2 resources w assoc.)
-- [ ]  MVC w Blueprint
 - [ ]  CRUD resources
+- [ ]  Blueprint Routes
+- [ ]  Flash Errors
+- [ ]  1 resource with Canny API attr
+- [ ]  Bootstrap Beautified
+- [ ]  404 + 500 Custom Routes
 - [x]  Push live to Heroku

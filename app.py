@@ -112,7 +112,7 @@ def page_not_found(e):
 @app.errorhandler(500)
 def something_went_wrong(e):
     # note that we set the 404 status explicitly
-    return render_template('404.html'), 404
+    return render_template('500.html'), 500
 
 
 
