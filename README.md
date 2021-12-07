@@ -6,7 +6,7 @@
 
 ---
 - [x]  Wireframes
-- [ ]  ERD (≥ 2 resources w assoc.)
-- [ ]  Build home page MVC w Blueprint
+- [x]  ERD (≥ 2 resources w assoc.)
+- [ ]  MVC w Blueprint
 - [ ]  CRUD resources
 - [x]  Push live to Heroku
