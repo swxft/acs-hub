@@ -1,4 +1,3 @@
-<!-- List of all Playlists  -->
 {% extends 'base.html' %}
 
 {% block content %}
@@ -6,9 +5,9 @@
 
 <div class='row'>
     {% for article in articles %}
-        <div class='col-md-3'>
+        <div class='col-lg-10'>
             <h2><a href='/articles/{{ article._id }}'>{{ article.title }}</a></h2>
-            <small>{{ article.body }}</small>
+            <article>{{ article.body }}</article>
         </div>
     {% endfor %}
 </div>

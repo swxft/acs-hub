@@ -5,17 +5,16 @@
         <label for='article-title'>Title</label><br>
         <input class='form-control' id='article-title' type='text' name='title' value='{{ article.title }}'/>
     </div>
-    
     <!-- Body -->
     <div class='form-group'>
         <label for='article-body'>Article Body</label><br>
-        <input class='form-control' id='article-body' type='text' name='article-body' value='{{ article.body }}' />
-    </div>
+        <textarea class='form-control' id='article-body' type='text' name='body' rows="10" value='{{ article.body }}'></textarea></div>
     
     <!-- AUTHOR -->
     <div class='form-group'>
         <label for='article-author'>Author</label><br>
-        <input class='form-control' id='article-title' type='text' name='title' value='{{ article.title }}'/>
+        <input class='form-control' id='article-author' type='text' name='author' value='{{ article.author }}'/>
     </div>
+    
 
 </fieldset>
