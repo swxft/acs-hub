@@ -14,6 +14,13 @@ pip3 freeze > requirements.txt
 export FLASK_ENV=development; flask run
 
 http://127.0.0.1:5000/ || localhost:5000
+
+./ngrok http 5000
+copy <this_link> -> http://localhost:5000
+
+
+This link only works when ngrok is in use
+
 """
 
 app = Flask(__name__)
