@@ -1,4 +1,5 @@
-from flask import Flask, render_template, request, redirect, url_for
+import re
+from flask import Flask, render_template, request, redirect, url_for, json
 from flask_pymongo import PyMongo
 from pymongo import MongoClient
 from bson.objectid import ObjectId
@@ -13,7 +14,7 @@ pip3 freeze > requirements.txt
 
 export FLASK_ENV=development; flask run
 
-http://127.0.0.1:5000/ || localhost:5000
+http://9444-73-237-162-244.ngrok.io || localhost:5000
 
 ./ngrok http 5000
 copy <this_link> -> http://localhost:5000
@@ -38,6 +39,18 @@ suggestions = db.suggestions
 @app.route('/')
 def articles_index():
     return render_template('articles_index.html', articles=articles.find())
+
+
+@app.route('/webhook', methods=['POST'])
+def webhook():
+    response = request.json
+    # response = json.dumps(request.json, indent=2)
+    # for item in response:
+    #     print(item)
+    # print(f"title is: {response.get('title')}")
+    print(response["object"]["title"])
+    print(response["object"]["details"])
+    return response
 
 
 # New Article Form Route ----------------------
